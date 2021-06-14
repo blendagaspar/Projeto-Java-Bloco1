@@ -1,5 +1,7 @@
 package ProgramaCalculadoraIMC;
-
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 public class ClasseCadastro {
 
 	private String nome;
@@ -28,7 +30,22 @@ public class ClasseCadastro {
 	public void Impressao() {
 		System.out.println("\t===============INFORMAÇÕES DO USUÁRIO================\n"
 				+ "\n\tNome: " + nome + "\n\tIdade: " + idade + " anos"
-				+ "\n\tGênero: " + gênero 
-				+ "\n\t====================================================="); 
+				+ "\n\tQual gênero você se identifica : " + gênero 
+				+ "\n\t====================================================="); }
+		
+		public void limpa() {
+			try {
+				Robot robot = new Robot();
+				robot.keyPress(KeyEvent.VK_SHIFT);
+				robot.keyPress(KeyEvent.VK_F10);
+				robot.keyPress(KeyEvent.VK_R);
+				robot.keyRelease(KeyEvent.VK_SHIFT);
+			}catch(AWTException e) {
+			e.printStackTrace();
+			}
+			
+			
+		
+		
     }
 }

@@ -12,6 +12,7 @@ public class ImpressaoImc {
 		calculadoraImc Imc = new calculadoraImc();
 		int lista;
 	    int endereco =  1;
+	    ClasseCadastro L = new ClasseCadastro();
 		ArrayList<String> SL = new ArrayList<>();
 		ArrayList<String> ZN = new ArrayList<>();
 		ArrayList<String> ZO = new ArrayList<>();
@@ -82,7 +83,7 @@ public class ImpressaoImc {
 		
 		
 		Thread.sleep(1000);
-		System.out.println("aguarde enquanto fazemos o cálculo do IMC...........");
+		System.out.println("Aguarde enquanto fazemos o cálculo do IMC...........");
 		Thread.sleep(3000);
 		
 		System.out.println("\nO seu IMC é: " + Imc.getCalculoImc());
@@ -123,7 +124,14 @@ public class ImpressaoImc {
 	    System.out.println("=======================================================================================");
 	    
 	    
-	     System.out.println("\n\nQual é a zona da cidade de São Paulo onde o paciente mora ([1]-sul, [2]-norte,[3]- oeste, [4]-leste,[5]- centro):" );
+	    
+	     Thread.sleep(5000);
+	   
+	 	 L.limpa();
+	     
+	    Thread.sleep(3000);
+	    
+	     System.out.println("Qual é a zona da cidade de São Paulo onde o paciente mora ([1]-sul, [2]-norte,[3]- oeste, [4]-leste,[5]- centro):" );
 	     System.out.println();
 	     endereco=scan.nextInt();
 	     
@@ -133,8 +141,7 @@ public class ImpressaoImc {
 	     
 		 if (endereco == 1) {
 	    
-	     
-	  
+	   
 	     System.out.println("Zona Sul\n" + SL);
 			
 		} 
@@ -162,21 +169,21 @@ public class ImpressaoImc {
  	     System.out.println("Centro\n" + CE);
         } 
         
-		System.out.println("=============================================================================================================================");
-        System.out.println(" \n\nDigite [1] para imprimir a lista ===== Digite [2] Para Finalizar atendimento:");
+		System.out.println("==============================================================================================================================");
+        System.out.println(" \n\nDigite [1] para imprimir a lista e finalizar atendimento ===== Digite [2] Para Finalizar e ir para o próximo atendimento:");
         lista=scan.nextInt();
         
         if(lista==1) {
         	
-        	System.out.println("Imprimindo a lista...");
+        	System.out.println("Imprimindo a lista e finalizando atendimento...");
         }
     
-        else if (lista==2) {
-        	
-        	System.out.println("Atendimento finalizado...");
+        else if(lista==2) {
+        	System.out.println("Atendimento finalizado");
         	
         }
         
+	    scan.close();
         
 	}
 }
