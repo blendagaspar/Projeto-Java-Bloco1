@@ -30,7 +30,7 @@ public class ClasseCadastro {
 	public void Impressao() {
 		System.out.println("\t===============INFORMAÇÕES DO USUÁRIO================\n"
 				+ "\n\tNome: " + nome + "\n\tIdade: " + idade + " anos"
-				+ "\n\tQual gênero você se identifica : " + gênero 
+				+ "\n\t Gênero : " + gênero 
 				+ "\n\t====================================================="); }
 		
 		public void limpa() {

@@ -84,7 +84,7 @@ public class ImpressaoImc {
 		
 		Thread.sleep(1000);
 		System.out.println("Aguarde enquanto fazemos o cálculo do IMC...........");
-		Thread.sleep(3000);
+		Thread.sleep(13000);
 		
 		System.out.println("\nO seu IMC é: " + Imc.getCalculoImc());
 	    System.out.println();
